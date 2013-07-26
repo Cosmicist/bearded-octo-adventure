@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <h1>{{ entry.title }}</h1>
+
+    <small>Published on {{ entry.date | date("l, F jS Y") }} by {{ entry.author }}</small>
+     
+    <p/>
+     
+    {{ entry.content | raw }}
+{% endblock %}

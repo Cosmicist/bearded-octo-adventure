@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <h1>Blog!</h1>
+
+    <p>&nbsp;</p>
+
+    {% for entry in entries -%}
+        <p>
+            <a href="/article/{{ entry.slug }}">{{ entry.title }}</a><br>
+            Published on {{ entry.date | date("l, F jS Y") }} by {{ entry.author }}
+        </p>
+    {%- endfor %}
+{% endblock %}
